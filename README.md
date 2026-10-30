@@ -1,40 +1,100 @@
 # ROS 2 Turtlesim Navigation System
 
+A robotics simulation project developed using ROS 2 Jazzy, Python, and Ubuntu 24.04.
+
 ## Overview
-A beginner robotics project built with ROS 2 Jazzy,
-Ubuntu 24.04 and Python using the Turtlesim simulator.
+
+This project demonstrates target-based navigation of a turtle in the ROS 2 Turtlesim environment. A custom Python node controls the turtle using velocity commands and position feedback.
+
+The project helps demonstrate the fundamentals of robot motion control and ROS 2 communication.
 
 ## Features
+
 - Target-based turtle navigation
 - Position feedback using ROS 2 topics
 - Linear and angular velocity control
 - Pentagon drawing experiment
 
-## Technologies
-- Ubuntu 24.04
+## Technologies Used
+
 - ROS 2 Jazzy
-- Python
+- Ubuntu 24.04 LTS
+- Python 3
 - Turtlesim
 - Colcon
+- Git and GitHub
+
+## Project Structure
+
+```text
+turtle_navigation/
+├── package.xml
+├── setup.py
+├── setup.cfg
+├── resource/
+├── turtle_navigation/
+│   ├── __init__.py
+│   └── navigator.py
+└── README.md
+```
 
 ## Installation
-Source ROS 2:
 
-    source /opt/ros/jazzy/setup.bash
+Clone the repository:
 
-Build the package:
+```bash
+git clone https://github.com/zeeshanshaikh07-bit/ros2-turtlesim-navigation.git
+```
 
-    cd ~/turtle_ws
-    colcon build --packages-select turtle_navigation
+Build the ROS 2 package:
 
-Source the workspace:
+```bash
+cd ros2-turtlesim-navigation
+colcon build
+source install/setup.bash
+```
 
-    source install/setup.bash
+## How to Run
 
-Run the simulator in one terminal:
+Open Terminal 1:
 
-    ros2 run turtlesim turtlesim_node
+```bash
+source /opt/ros/jazzy/setup.bash
+ros2 run turtlesim turtlesim_node
+```
 
-Run the navigation program in another terminal:
+Open Terminal 2:
 
-    ros2 run turtle_navigation navigator
+```bash
+source /opt/ros/jazzy/setup.bash
+source ~/turtle_ws/install/setup.bash
+ros2 run turtle_navigation navigator
+```
+
+## Learning Outcomes
+
+- Understanding ROS 2 nodes and topics
+- Working with Python in ROS 2
+- Implementing velocity-based robot control
+- Understanding position feedback
+- Building ROS 2 packages with Colcon
+
+## Future Improvements
+
+- Improve navigation accuracy
+- Add configurable target positions
+- Implement obstacle avoidance
+- Add launch files
+- Extend the project to a mobile robot
+
+## Author
+
+**Zeeshan Shaikh**
+
+B.Tech – Robotics and Automation
+
+GitHub: [zeeshanshaikh07-bit](https://github.com/zeeshanshaikh07-bit)
+
+## License
+
+For educational purposes.
